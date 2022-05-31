@@ -125,6 +125,8 @@ export default {
   data() {
     return {
       //state post
+      username :"",
+      password:"",
       login: {
         username: "",
         password: "",
@@ -135,13 +137,17 @@ export default {
   },
   methods: {
     //method "store"
+  
     async store(e) {
+        console.log("store1");
       e.preventDefault();
-      username = this.login.username;
-      password = this.login.password;
-      console.log(username);
-      console.log(password);
-      let endPoint = `/api/userlogin/?username=${username}&pwd=${password}`;
+      console.log("store2");
+      this.username = this.login.username;
+      console.log("store3");
+      this.password = this.login.password;
+      console.log(this.username);
+      console.log(this.password);
+      let endPoint = `/api/userlogin/?username=${this.username}&pwd=${this.password}`;
       console.log(endPoint);
       await this.$axios
         .$get(endPoint)
@@ -149,7 +155,7 @@ export default {
           console.log(res);
           if (res.data.status == "ok") {
             // console.log(res.data.status);
-            localStorage.username = username;
+            localStorage.username = this.username;
             localStorage.id = res.data.id;
             localStorage.no_pendaftaran = res.data.no_pendaftaran;
             
