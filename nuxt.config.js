@@ -18,7 +18,8 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    // "~assets/css/tailwind.css",
+    "~assets/css/tailwind.css",
+    "@fortawesome/fontawesome-svg-core/styles.css"
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -31,8 +32,8 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
-    // "bootstrap-vue/nuxt",
-    // "@nuxtjs/tailwindcss"
+    "bootstrap-vue/nuxt",
+    "@nuxtjs/tailwindcss"
     // ['@nuxtjs/fontawesome', {
     //   component: 'fa',
     //   suffix: true,
@@ -47,13 +48,13 @@ export default {
   ],
 
   axios: {
-    // baseURL: 'http://127.0.0.1:8000'
-    baseURL: 'http://api.psikologiuwp.com'
+    baseURL: 'https://apilumen.psikologiuwp.com/public'
+    // baseURL: 'http://apilumen.psikologiuwp.com'
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    'bootstrap-vue/nuxt',
+    // 'bootstrap-vue/nuxt',
     "@nuxtjs/axios",
     'nuxt-vue-select',
   ],
