@@ -8,7 +8,7 @@
         <a href="index.html">DASHBOARD</a>
       </div>
       <ul class="sidebar-menu">
-        <li class="menu-header"> {{this.login.username}} [{{this.login.id}}]{{this.login.no_pendaftaran}}</li>
+        <li class="menu-header"></li>
          <!-- <li class="nav-item dropdown">
           <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"
             ><i class="fas fa-columns"></i> <span>Example</span></a>
@@ -55,29 +55,34 @@
         </li> -->
         <li>
           <nuxt-link class="nav-link" to="/dashboard/"
-            ><i class="far fa-square"></i> <span>Dashboard</span></nuxt-link
+            ><i class="far fa-square"></i> <span>DASHBOARD</span></nuxt-link
           >
         </li>
         <li>
-          <nuxt-link class="nav-link" to="/tiu/"
-            ><i class="far fa-square"></i> <span>TIU</span></nuxt-link
+          <nuxt-link class="nav-link" to="/peserta/"
+            ><i class="far fa-square"></i> <span>PESERTA</span></nuxt-link
           >
         </li>
         <li>
-          <nuxt-link class="nav-link" to="/papi/"
-            ><i class="far fa-square"></i> <span>PAPI</span></nuxt-link
+          <nuxt-link class="nav-link" to="/admin/result_tiu/"
+            ><i class="far fa-square"></i> <span>TIU RESULT</span></nuxt-link
           >
         </li>
         <li>
-          <nuxt-link class="nav-link" to="/riasec/"
-            ><i class="far fa-square"></i> <span>RIASEC</span></nuxt-link
+          <nuxt-link class="nav-link" to="/admin/result_papi/"
+            ><i class="far fa-square"></i> <span>PAPI RESULT</span></nuxt-link
+          >
+        </li>
+        <li>
+          <nuxt-link class="nav-link" to="/admin/result_riasec/"
+            ><i class="far fa-square"></i> <span>RIASEC RESULT</span></nuxt-link
           >
         </li>
 
       
         <li>
           <nuxt-link class="nav-link has-icon text-danger" to="/logout"
-            ><i class="fas fa-sign-out-alt"></i> <span>Logout</span></nuxt-link
+            ><i class="fas fa-sign-out-alt"></i> <span>LOGOUT</span></nuxt-link
           >
         </li>
       </ul>

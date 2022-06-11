@@ -12,7 +12,7 @@
             offset-xl-4">
           <div class="card">
             <div class="card-header">
-              <h4>Login</h4>
+              <h4>Login Admin</h4>
             </div>
             <div class="card-body">
               <form
@@ -116,29 +116,12 @@ export default {
      e.preventDefault();
  this.username = this.login.username;
       this.password = this.login.password;
-       await this.$axios
-            .get(`/api/userlogin?username=${this.username}&pwd=${this.password}`)
-      .then((response) => {
-        console.log("masuk");
-        this.posts = response.data;
-        console.log(this.posts.message);
-                  if (response.data.message == "success") {
-            console.log(response.data.data);
-            console.log(this.username) 
-            console.log(response.data.data[0].id) 
-            console.log(response.data.data[0].no_pendaftaran) 
-            localStorage.username = this.username;
-            localStorage.id = response.data.data[0].id;
-            localStorage.no_pendaftaran = response.data.data[0].no_pendaftaran;
-            
+            if ((this.login.username == "admin")&&(this.login.password== "123456")) {
+                       
             this.$router.push({
-              name: "dashboard",
+              name: "adminpanels",
             });
           }
-      })
-      .catch((error) => {
-        console.log("error");
-      });
 
 
     },

@@ -32,6 +32,7 @@
               </li>
             </ul>
           </div>
+          
 
           <b-navbar-nav class="ml-auto">
             <nuxt-link to="/admin/login">
@@ -41,6 +42,18 @@
                 type="submit"
                 variant="primary"
                 >Login</b-button
+              >
+            </nuxt-link>
+          </b-navbar-nav>
+          &nbsp;
+               <b-navbar-nav class="ml-auto">
+            <nuxt-link to="/admin/loginadmin">
+              <b-button
+                size="sm"
+                class="my-2 my-sm-0"
+                type="submit"
+                variant="secondary"
+                >Admin Panels</b-button
               >
             </nuxt-link>
           </b-navbar-nav>
