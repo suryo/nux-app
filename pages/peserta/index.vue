@@ -121,10 +121,10 @@ export default {
   },
 
   methods: {
-    async deleteProvinsi(posts, i) {
+    async deletePeserta(posts, i) {
       //delete data post by ID
       console.log(i);
-      await this.$axios.delete(`api/provinsi/${posts.id}`).then(() => {
+      await this.$axios.delete(`api/peserta/${posts.id}`).then(() => {
         //   //remove item array by index
         this.posts.splice(i, 1);
       });
