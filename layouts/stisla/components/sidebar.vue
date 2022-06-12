@@ -2,7 +2,7 @@
   <div class="main-sidebar">
     <aside id="sidebar-wrapper">
       <div class="sidebar-brand">
-        <nuxt-link to="/dashboard">E-PSIKOTEST UWP</nuxt-link> <br>
+        <nuxt-link to="/dashboard">E-PSIKOTEST</nuxt-link> <br>
       </div>
       <div class="sidebar-brand sidebar-brand-sm">
         <a href="index.html">DASHBOARD</a>
@@ -55,7 +55,7 @@
         </li> -->
         <li>
           <nuxt-link class="nav-link" to="/dashboard/"
-            ><i class="far fa-square"></i> <span>Dashboard</span></nuxt-link
+            ><i class="far fa-square"></i> <span>DASHBOARD</span></nuxt-link
           >
         </li>
         <li>
@@ -77,7 +77,7 @@
       
         <li>
           <nuxt-link class="nav-link has-icon text-danger" to="/logout"
-            ><i class="fas fa-sign-out-alt"></i> <span>Logout</span></nuxt-link
+            ><i class="fas fa-sign-out-alt"></i> <span>LOGOUT</span></nuxt-link
           >
         </li>
       </ul>

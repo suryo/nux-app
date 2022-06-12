@@ -5,9 +5,6 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h4>PESERTA</h4>
-              <a href="/peserta/add/" class="btn btn-primary">add</a>&nbsp;
-
               <div class="card-header-form">
                 <form>
                   <div class="input-group">
@@ -32,33 +29,12 @@
                     <th>NAMA</th>
                     <th>ASAL SEKOLAH</th>
                     <th>STATUS</th>
-                    <th>ACTION</th>
                   </tr>
                   <tr v-for="(post, i) in posts" :key="i">
                     <td>{{ posts[i].no_pendaftaran }}</td>
                     <td>{{ posts[i].nama}}</td>
                     <td>{{ posts[i].asal_sekolah }}</td>
                     <td>{{ posts[i].status}}</td>
-                    
-
-                    <td>
-                      <div class="buttons">
-                        <nuxt-link
-                          class="btn btn-info"
-                          :to="`/peserta/edit/${posts[i].id}`"
-                          >EDIT</nuxt-link
-                        >
-
-                        <button
-                          type="button"
-                          class="btn btn-danger"
-                          size="sm"
-                          @click="deletePeserta(posts[i], i)"
-                        >
-                          DELETE
-                        </button>
-                      </div>
-                    </td>
                   </tr>
                 </table>
               </div>
@@ -72,7 +48,7 @@
  
 <script>
 export default {
-  layout: "stisla/defaultadmin",
+  layout: "front/default",
   components: {},
   data() {
     return {

@@ -5,47 +5,56 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h4>PESERTA</h4>
-              <a href="/peserta/add/" class="btn btn-primary">add</a>&nbsp;
+              <h4>RIASEC RESULT RESUME</h4>
+              <!-- <a href="/provinsi/add/" class="btn btn-primary">add</a> -->
 
               <div class="card-header-form">
                 <form>
                   <div class="input-group">
-                    <input
+                    <!-- <input
                       type="text"
                       class="form-control"
                       placeholder="Search"
-                    />
-                    &nbsp;
-                    <div class="input-group-btn">
+                    /> -->
+                    <!-- <div class="input-group-btn">
                       <button class="btn btn-primary">Search</button>
-                    </div>
+                    </div> -->
                   </div>
                 </form>
               </div>
             </div>
             <div class="card-body p-0">
               <div class="table-responsive">
-                <table class="table table-striped">
+                <table class="table table-bordered">
                   <tr>
                     <th>NO PENDAFTARAN</th>
                     <th>NAMA</th>
-                    <th>ASAL SEKOLAH</th>
-                    <th>STATUS</th>
-                    <th>ACTION</th>
+                    <th>R</th>
+                    <th>I</th>
+                    <th>A</th>
+                    <th>S</th>
+                    <th>E</th>
+                    <th>C</th>
+                    <th>DESKRIPSI</th>
+
+<!-- 
+                    <th>Action</th> -->
                   </tr>
                   <tr v-for="(post, i) in posts" :key="i">
-                    <td>{{ posts[i].no_pendaftaran }}</td>
-                    <td>{{ posts[i].nama}}</td>
-                    <td>{{ posts[i].asal_sekolah }}</td>
-                    <td>{{ posts[i].status}}</td>
-                    
-
-                    <td>
+                    <td>{{ posts[i].no_pendaftaran}}</td>
+                    <td>{{ posts[i].username}}</td>
+                    <td>{{ posts[i].r}}</td>
+                    <td>{{ posts[i].i}}</td>
+                    <td>{{ posts[i].a}}</td>
+                    <td>{{ posts[i].s}}</td>
+                    <td>{{ posts[i].e}}</td>
+                    <td>{{ posts[i].c}}</td>
+                    <td>{{ posts[i].deskripsi}}</td>
+                    <!-- <td>
                       <div class="buttons">
                         <nuxt-link
                           class="btn btn-info"
-                          :to="`/peserta/edit/${posts[i].id}`"
+                          :to="`/provinsi/edit/${posts[i].id}`"
                           >EDIT</nuxt-link
                         >
 
@@ -53,12 +62,12 @@
                           type="button"
                           class="btn btn-danger"
                           size="sm"
-                          @click="deletePeserta(posts[i], i)"
+                          @click="deleteProvinsi(posts[i], i)"
                         >
                           DELETE
                         </button>
                       </div>
-                    </td>
+                    </td> -->
                   </tr>
                 </table>
               </div>
@@ -109,7 +118,7 @@ export default {
     console.log("test");
     //fething ke Rest API
     this.$axios
-      .get("/api/peserta")
+      .get("/api/riasecresult")
       .then((response) => {
         //assign response ke state "posts"
         this.posts = response.data.data;

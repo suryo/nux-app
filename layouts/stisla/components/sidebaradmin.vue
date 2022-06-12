@@ -2,7 +2,7 @@
   <div class="main-sidebar">
     <aside id="sidebar-wrapper">
       <div class="sidebar-brand">
-        <nuxt-link to="/dashboard">E-PSIKOTEST UWP</nuxt-link> <br>
+        <nuxt-link to="/dashboard">E-PSIKOTEST</nuxt-link> <br>
       </div>
       <div class="sidebar-brand sidebar-brand-sm">
         <a href="index.html">DASHBOARD</a>
@@ -54,8 +54,8 @@
           </ul>
         </li> -->
         <li>
-          <nuxt-link class="nav-link" to="/dashboard/"
-            ><i class="far fa-square"></i> <span>DASHBOARD</span></nuxt-link
+          <nuxt-link class="nav-link" to="/adminpanels/"
+            ><i class="far fa-square"></i> <span>DASHBOARD ADMIN</span></nuxt-link
           >
         </li>
         <li>
@@ -76,6 +76,11 @@
         <li>
           <nuxt-link class="nav-link" to="/admin/result_riasec/"
             ><i class="far fa-square"></i> <span>RIASEC RESULT</span></nuxt-link
+          >
+        </li>
+         <li>
+          <nuxt-link class="nav-link" to="/admin/result_riasec_resume/"
+            ><i class="far fa-square"></i> <span>RIASEC RESUME</span></nuxt-link
           >
         </li>
 

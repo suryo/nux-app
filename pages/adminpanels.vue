@@ -9,9 +9,9 @@
             </div>
             <div class="card-wrap">
               <div class="card-header">
-                <h4>Total Admin</h4>
+                <h4>Total Peserta</h4>
               </div>
-              <div class="card-body">10</div>
+              <div class="card-body">{{this.peserta.length}}</div>
             </div>
           </div>
         </div>
@@ -22,9 +22,9 @@
             </div>
             <div class="card-wrap">
               <div class="card-header">
-                <h4>News</h4>
+                <h4>TIU</h4>
               </div>
-              <div class="card-body">42</div>
+              <div class="card-body">{{this.tiu.length}}</div>
             </div>
           </div>
         </div>
@@ -35,9 +35,9 @@
             </div>
             <div class="card-wrap">
               <div class="card-header">
-                <h4>Reports</h4>
+                <h4>PAPI</h4>
               </div>
-              <div class="card-body">1,201</div>
+              <div class="card-body">{{this.papi.length}}</div>
             </div>
           </div>
         </div>
@@ -48,9 +48,9 @@
             </div>
             <div class="card-wrap">
               <div class="card-header">
-                <h4>Online Users</h4>
+                <h4>RIASEC</h4>
               </div>
-              <div class="card-body">47</div>
+              <div class="card-body">{{this.riasec.length}}</div>
             </div>
           </div>
         </div>
@@ -85,9 +85,63 @@ export default {
           content: `<span><b class="has-text-grey">Every</b> component is responsive</span>`,
           link: "/coach"
         }
-      ]
+      ],
+       peserta: [],
+       tiu: [],
+       papi: [],
+       riasec: [],
     };
-  }
+  },
+
+    mounted() {
+    console.log("test");
+    //fething ke Rest API
+    this.$axios
+      .get("/api/peserta")
+      .then((response) => {
+        //assign response ke state "posts"
+        this.peserta = response.data.data;
+        console.log(this.posts.length);
+      })
+      .catch((error) => {
+        console.log(error.response.data);
+      });
+
+     this.$axios
+      .get("/api/tiu")
+      .then((response) => {
+        //assign response ke state "posts"
+        this.tiu = response.data.data;
+        console.log(this.tiu.length);
+      })
+      .catch((error) => {
+        console.log(error.response.data);
+      });
+
+      this.$axios
+      .get("/api/papi")
+      .then((response) => {
+        //assign response ke state "posts"
+        this.papi = response.data.data;
+        console.log(this.papi.length);
+      })
+      .catch((error) => {
+        console.log(error.response.data);
+      });
+
+      this.$axios
+      .get("/api/riasec")
+      .then((response) => {
+        //assign response ke state "posts"
+        this.riasec = response.data.data;
+        console.log(this.riasec.length);
+      })
+      .catch((error) => {
+        console.log(error.response.data);
+      });
+  },
+
+  
 };
 </script>
 

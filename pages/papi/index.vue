@@ -6,12 +6,18 @@
           <div class="card">
             <div class="card-header">
               <h4>
-                Pada test ini terdapat 90 pertanyaan. Anda harus... JANGAN TEKAN
-                TOMBOL SEBELUM DI INSTRUKSIKAN
+                PAPI
               </h4>
-              <img src="~/assets/img/logo4.png" />
+              
+              <!-- <img src="~/assets/img/logo4.png" /> -->
             </div>
             <div class="card-body">
+               <div class="form-group">
+                 Perhatikan instruksi pada video dibawah ini.
+               </div>
+              <div class="form-group">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/PV1ESeZcjqg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
               <div class="form-group">
                 <label>Masukkan Kode Test</label>
                 <input type="text" v-model="password" class="form-control" />

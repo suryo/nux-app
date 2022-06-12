@@ -16,11 +16,17 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav">
+
+               <li class="nav-item">
+                <a class="header_button nav-link" href="/">
+                  <span>Home</span>
+                </a>
+              </li>
              
              
               <li class="nav-item">
-                <a class="header_button nav-link" href="#">
-                  <span>User Info</span>
+                <a class="header_button nav-link" href="/daftar_peserta">
+                  <span>Daftar Peserta</span>
                 </a>
               </li>
              
